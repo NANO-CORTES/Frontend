@@ -9,6 +9,7 @@ import './styles/App.css';
 
 import RegisterPage from './pages/RegisterPage';
 import UserManagementPage from './pages/UserManagementPage';
+import ZoneComparator from './components/comparison/ZoneComparator';
 
 function App() {
   return (
@@ -27,11 +28,18 @@ function App() {
               </ProtectedRoute>
             } 
           />
+          <Route 
+            path="/comparison" 
+            element={
+              <ProtectedRoute>
+                <ZoneComparator />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
       </Router>
     </AuthProvider>
   );
 }
-
 
 export default App;
